@@ -4,7 +4,6 @@ from plugin import InvenTreePlugin
 from plugin.mixins import UrlsMixin, AppMixin
 
 from django.urls import re_path
-from django.utils.translation import gettext_lazy as _
 from drf_spectacular.plumbing import get_relative_url, set_query_parameters
 from drf_spectacular.settings import spectacular_settings
 from drf_spectacular.utils import extend_schema
@@ -12,7 +11,6 @@ from rest_framework.renderers import TemplateHTMLRenderer
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
 from rest_framework.views import APIView
-
 
 
 class ApiDocView(APIView):
@@ -34,6 +32,7 @@ class ApiDocView(APIView):
             },
             template_name="rapidoc.html",
         )
+
 
 class RapidocPlugin(UrlsMixin, AppMixin, InvenTreePlugin):
     """Use RapiDoc for Inventree API docs."""
