@@ -12,7 +12,7 @@ Enable the plugin in the plugin settings. You need to be signed in as a superuse
 **The server will restart if you enable the plugin**
 
 3. Configure
-There are no configuration options for this plugin. Your server needs to have URL mixins enabled.
+There are no configuration options for this plugin. Your server needs to have `URL` and `App` mixins enabled.
 
 ## License
 This project is licensed under the MIT license.
