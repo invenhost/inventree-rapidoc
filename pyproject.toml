@@ -1,0 +1,42 @@
+
+[build-system]
+requires = ["setuptools", "wheel", "pyyaml"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "inventree-rapidoc"
+version =  "1.0"
+description="Use RapiDoc for Inventree API docs"
+readme = "README.md"
+license = {text = "MIT license"}
+keywords = ["inventree", "inventree-plugin", "inventree-rapidoc"]
+authors = [
+    {name = "Matthias Mair", email =  "code@mjmair.com"}
+]
+classifiers=[
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Plugins",
+    "Framework :: Django",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Manufacturing",
+    "Intended Audience :: End Users/Desktop",
+    "Topic :: Scientific/Engineering",
+        'License :: OSI Approved :: MIT License',
+]
+requires-python=">=3.9"
+dependencies = ['django', ]
+
+[project.optional-dependencies]
+dev = ['twine', 'setuptools']
+
+[project.urls]
+"Repository" = "https://github.com/matmair/inventree-rapidoc"
+"Bug Tracker" = "https://github.com/matmair/inventree-rapidoc/issues"
+
+[project.entry-points."inventree_plugins"]
+inventree-rapidoc = "inventree_rapidoc:RapidocPlugin"
+
+[tool.setuptools.packages.find]
+where = ["src"]

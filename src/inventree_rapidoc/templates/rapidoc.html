@@ -1,0 +1,29 @@
+{% load static %}
+{% load inventree_extras %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title|default:"RapiDoc" }}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="module" src="{% static "inventree_rapidoc/rapidoc-min.js" %}"></script>
+  </head>
+  <body>
+    <rapi-doc
+      spec-url="{{ schema_url }}"
+      schema-style="tree"
+      schema-expand-level="2"
+      render-style="read"
+      allow-spec-url-load="false"
+      allow-spec-file-load="false"
+      load-fonts="false"
+    >
+    <img
+      slot="logo"
+      src="{% inventree_logo %}"
+      style="width:50px; height:50px"
+    />
+    </rapi-doc>
+  </body>
+</html>
