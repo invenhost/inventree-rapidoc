@@ -9,5 +9,5 @@ on:
 
 jobs:
   plugin-action:
-    uses: matmair/inventree-meta-plugin/.github/workflows/plugin_action.yaml@main
+    uses: matmair/inventree-meta-plugin/.github/workflows/plugin_action.yaml@next
     secrets: inherit
