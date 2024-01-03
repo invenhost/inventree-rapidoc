@@ -1,9 +1,7 @@
 """Use RapiDoc for Inventree API docs."""
 
-from plugin import InvenTreePlugin
-from plugin.mixins import UrlsMixin, AppMixin
-
 from django.urls import re_path
+
 from drf_spectacular.plumbing import get_relative_url, set_query_parameters
 from drf_spectacular.settings import spectacular_settings
 from drf_spectacular.utils import extend_schema
@@ -11,6 +9,9 @@ from rest_framework.renderers import TemplateHTMLRenderer
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
 from rest_framework.views import APIView
+
+from plugin import InvenTreePlugin
+from plugin.mixins import AppMixin, UrlsMixin
 
 
 class ApiDocView(APIView):
@@ -37,11 +38,16 @@ class ApiDocView(APIView):
 class RapidocPlugin(UrlsMixin, AppMixin, InvenTreePlugin):
     """Use RapiDoc for Inventree API docs."""
 
-    NAME = 'RapidocPlugin'
-    SLUG = 'inventree-rapidoc'
+    NAME = "RapidocPlugin"
+    SLUG = "inventree-rapidoc"
     TITLE = "InvenTree RapiDoc"
 
     def setup_urls(self):
+        """Returns URL patterns for the plugin."""
         return [
-            re_path(r"^doc/", ApiDocView.as_view(url_name="schema"), name="rapidoc",),
+            re_path(
+                r"^doc/",
+                ApiDocView.as_view(url_name="schema"),
+                name="rapidoc",
+            ),
         ]
