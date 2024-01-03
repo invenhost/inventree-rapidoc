@@ -14,4 +14,3 @@ jobs:
       id-token: write
     with:
       pypi_trusted_publishers: true
-
