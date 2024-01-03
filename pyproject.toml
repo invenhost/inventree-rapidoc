@@ -5,11 +5,11 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "inventree-rapidoc"
-version =  "1.1a0"
+version =  "1.1"
 description="Use RapiDoc for Inventree API docs"
 readme = "README.md"
 license = {text = "MIT license"}
-keywords = ["inventree", "inventree-plugin", "inventree-rapidoc"]
+keywords = ["inventree", "inventree-plugin", "rapidoc"]
 authors = [
     {name = "Matthias Mair", email =  "code@mjmair.com"}
 ]
@@ -32,8 +32,8 @@ dependencies = ['django', ]
 dev = ['twine', 'setuptools']
 
 [project.urls]
-"Repository" = "https://github.com/matmair/inventree-rapidoc"
-"Bug Tracker" = "https://github.com/matmair/inventree-rapidoc/issues"
+"Repository" = "https://github.com/invenhost/inventree-rapidoc"
+"Bug Tracker" = "https://github.com/invenhost/inventree-rapidoc/issues"
 
 [project.entry-points."inventree_plugins"]
 inventree-rapidoc = "inventree_rapidoc:RapidocPlugin"
