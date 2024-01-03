@@ -10,6 +10,8 @@ on:
 jobs:
   plugin-action:
     uses: matmair/inventree-meta-plugin/.github/workflows/plugin_action.yaml@next
+    permissions:
+      id-token: write
     with:
       pypi_trusted_publishers: true
 
