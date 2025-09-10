@@ -23,7 +23,8 @@ classifiers=[
     "Intended Audience :: Manufacturing",
     "Intended Audience :: End Users/Desktop",
     "Topic :: Scientific/Engineering",
-        'License :: OSI Approved :: MIT License',
+    'License :: OSI Approved :: MIT License',
+    "Framework :: InvenTree",
 ]
 requires-python=">=3.9"
 dependencies = ['django', ]
